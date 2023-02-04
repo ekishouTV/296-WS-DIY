@@ -1,0 +1,31 @@
+@startuml 仕組み
+
+title 仕組み
+
+!include <tupadr3/common>
+!include <tupadr3/devicons/windows>
+
+skinparam DefaultFontName TsukuruFontTategaki
+scale 1.5
+
+legend
+この図：[[https://plantuml.com/ja/deployment-diagram PlantUML - 配置図]]
+この図のフォント：[[https://booth.pm/ja/items/4203455]] - 図月つくる つくるフォントVer.小学生
+PowerShellのアイコン：[[https://icons8.com/icon/59500/powershell PowerShell icon by Icons8]]
+end legend
+
+DEV_WINDOWS(ts, "タスク スケジューラ")
+component hn as "<img:https://img.icons8.com/color/48/null/powershell.png> \n Windows PowerShell \n hayaku-nero.ps1"
+actor 私
+
+ts -> hn: 毎日n時に実行
+
+note bottom
+[[https://learn.microsoft.com/ja-jp/windows/apps/design/shell/tiles-and-notifications/toast-notifications-overview トースト通知]] でひまりちゃんを表示
+
+画像：[[https://twitter.com/HimariMochimoon/status/1380501457493889029]]
+音声：[[https://www.fanbox.cc/@himarimochimoon/posts/625944]] - 15.おやすみなさいボイス1
+end note
+hn -> 私: <img:EyiGwhBVcAMH0Fo-inverted-small.jpg> \n おやすみなさい、子ウサギちゃん❤
+
+@enduml
